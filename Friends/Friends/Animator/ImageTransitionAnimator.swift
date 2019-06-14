@@ -32,7 +32,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         guard let toImage = destinationImageView,
               let toLabel = destinationNameLabel,
               let fromImage = sourceImageView,
-            let fromLabel = sourceNameLabel  else {return}
+              let fromLabel = sourceNameLabel  else {return}
         
 //        Get the start and end frames for the image view and label.
          let containerView = transitionContext.containerView
@@ -54,7 +54,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
       
         let transitionLabelInitialFrame = containerView.convert(fromLabel.bounds, from: fromLabel)
-        let transitionImageInitialFrame = containerView.convert(fromImage.bounds, from: toImage)
+        let transitionImageInitialFrame = containerView.convert(fromImage.bounds, from: fromImage)
         
         
         let transitioningLabel = UILabel(frame: transitionLabelInitialFrame)
