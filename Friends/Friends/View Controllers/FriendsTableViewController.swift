@@ -16,7 +16,7 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.delegate = navigationControllerDelegate
+//        navigationController?.delegate = navigationControllerDelegate
     }
 
     // MARK: - Table view data source
@@ -59,6 +59,7 @@ class FriendsTableViewController: UITableViewController {
             guard let destinationVC = segue.destination as? FriendsDetailViewController else {return}
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
             destinationVC.friend = friendController.friends[indexPath.row]
+            navigationController?.delegate = navigationControllerDelegate
           
     
     }
