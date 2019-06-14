@@ -11,6 +11,7 @@ import UIKit
 class FriendsTableViewController: UITableViewController {
 
   private let friendController = FriendController()
+    let navigationControllerDelegate = NavigationControllerDelegate()
     
     
     override func viewDidLoad() {
@@ -47,13 +48,18 @@ class FriendsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        Implement prepare(for segue:). Get the tapped row, and use it to give the navigation controller delegate the source table view cell.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath)
+        } else {
+            NSLog("Unable to get indexpath for sourcecell")
+        }
         
         if segue.identifier == "ShowDetail" {
             guard let destinationVC = segue.destination as? FriendsDetailViewController else {return}
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
             destinationVC.friend = friendController.friends[indexPath.row]
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
     }
     }
 

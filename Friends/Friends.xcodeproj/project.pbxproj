@@ -16,6 +16,8 @@
 		A336A52922B33DA9002FCE0A /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A336A52822B33DA9002FCE0A /* FriendsTableViewCell.swift */; };
 		A336A52B22B34006002FCE0A /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A336A52A22B34006002FCE0A /* Friend.swift */; };
 		A336A52E22B3406C002FCE0A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A336A52D22B3406C002FCE0A /* Controller.swift */; };
+		A336A53022B3493E002FCE0A /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A336A52F22B3493E002FCE0A /* NavigationControllerDelegate.swift */; };
+		A336A53422B34A42002FCE0A /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A336A53322B34A42002FCE0A /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A336A52822B33DA9002FCE0A /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		A336A52A22B34006002FCE0A /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		A336A52D22B3406C002FCE0A /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		A336A52F22B3493E002FCE0A /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		A336A53322B34A42002FCE0A /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +68,9 @@
 			children = (
 				A336A51222B33382002FCE0A /* AppDelegate.swift */,
 				A336A51622B33382002FCE0A /* Main.storyboard */,
-				A336A52422B33B5D002FCE0A /* FriendsTableViewController.swift */,
+				A336A53122B34A09002FCE0A /* View Controllers */,
+				A336A53222B34A1C002FCE0A /* Animator */,
 				A336A52C22B3403A002FCE0A /* Model */,
-				A336A52822B33DA9002FCE0A /* FriendsTableViewCell.swift */,
-				A336A52622B33B77002FCE0A /* FriendsDetailViewController.swift */,
 				A336A51922B33383002FCE0A /* Assets.xcassets */,
 				A336A51B22B33383002FCE0A /* LaunchScreen.storyboard */,
 				A336A51E22B33383002FCE0A /* Info.plist */,
@@ -82,6 +85,25 @@
 				A336A52D22B3406C002FCE0A /* Controller.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A336A53122B34A09002FCE0A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A336A52422B33B5D002FCE0A /* FriendsTableViewController.swift */,
+				A336A52822B33DA9002FCE0A /* FriendsTableViewCell.swift */,
+				A336A52622B33B77002FCE0A /* FriendsDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A336A53222B34A1C002FCE0A /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				A336A52F22B3493E002FCE0A /* NavigationControllerDelegate.swift */,
+				A336A53322B34A42002FCE0A /* ImageTransitionAnimator.swift */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A336A51322B33382002FCE0A /* AppDelegate.swift in Sources */,
+				A336A53422B34A42002FCE0A /* ImageTransitionAnimator.swift in Sources */,
 				A336A52522B33B5D002FCE0A /* FriendsTableViewController.swift in Sources */,
 				A336A52B22B34006002FCE0A /* Friend.swift in Sources */,
 				A336A52E22B3406C002FCE0A /* Controller.swift in Sources */,
 				A336A52722B33B77002FCE0A /* FriendsDetailViewController.swift in Sources */,
+				A336A53022B3493E002FCE0A /* NavigationControllerDelegate.swift in Sources */,
 				A336A52922B33DA9002FCE0A /* FriendsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
